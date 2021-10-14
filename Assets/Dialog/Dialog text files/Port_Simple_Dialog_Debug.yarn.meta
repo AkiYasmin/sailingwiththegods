@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 310946b5d224bb14abe8d4d135047682
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Port_Simple_Dialog_Debug-Start_Debug-0
+  - Port_Simple_Dialog_Debug-Start_Debug-1
+  - Port_Simple_Dialog_Debug-Start_Debug-2
+  - Port_Simple_Dialog_Debug-Start_Debug-3
+  - Port_Simple_Dialog_Debug-Start_Debug-4
+  - Port_Simple_Dialog_Debug-Start_Debug-5
+  - Port_Simple_Dialog_Debug-enter_water_debug-6
+  - Port_Simple_Dialog_Debug-enter_trading_debug-7
+  - Port_Simple_Dialog_Debug-enter_tavern_debug-8
+  - Port_Simple_Dialog_Debug-enter_full_debug-9
+  - Port_Simple_Dialog_Debug-exit_debug-10
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

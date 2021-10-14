@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: 1992076589932ed418b56c4ce759a8bb
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Crew_Dialogue_3-StartCrewDialouge3-0
+  - Crew_Dialogue_3-StartCrewDialouge3-1
+  - Crew_Dialogue_3-StartCrewDialouge3-2
+  - Crew_Dialogue_3-StartCrewDialouge3-3
+  - Crew_Dialogue_3-nice.debug-4
+  - Crew_Dialogue_3-mean1.debug-5
+  - Crew_Dialogue_3-mean1.debug-6
+  - Crew_Dialogue_3-mean1.debug-7
+  - Crew_Dialogue_3-mean2.debug-8
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

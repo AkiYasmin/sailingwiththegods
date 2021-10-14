@@ -1,0 +1,95 @@
+title: Start_Debug
+tags: 
+colorID: 0
+position: 718,-337
+---
+<< reset DialogScreen >>
+<< setpartner DialogScreen CrewTalk >>
+<< setpartnername DialogScreen AllCrewMember >> 
+<<playsound>>
+<< set $answer_nice to false >>
+<< set $answer_mean to false >>
+<< set $answer_ignore to false >> 
+
+<< setspeaker DialogScreen other >>
+
+Crewmate: Do you want to play Knucklebone, Captain? //Question initiated  
+
+[[ Jason: Sure, I would like to play it with you!|nice_debug]] //Choice 1
+
+[[ Jason: I don't have time to play such childish games! |mean1_debug]] //Choice 2
+
+[[ Jason: *Ignores them.* |mean2_debug]] // Choice 3 
+
+[[  LEAVING Option|exit_debug]]
+===
+title: nice_debug
+tags: 
+colorID: 0
+position: 360,44
+---
+<<increase>> // increase morale
+
+ Jason: Sure, I would like to play it with you!
+
+Crewmate: Yay!
+
+[[ (TESTING) Play around for a few minutes|exit2_debug]]
+===
+title: mean1_debug
+tags: 
+colorID: 0
+position: 979,54
+---
+<<decrease>> //Decreases morale
+ Jason: I don't have time to play such childish games! 
+
+Crewmate: "It's not childish! I want to play with you to past the time."
+
+Jason: "Go play with someone else or do your chores like you're supposed to!" 
+
+Crewmate: "FINE! Be that way!" 
+
+[[ (TESTING) Say Goodbye|exit_debug]]
+===
+title: mean2_debug
+tags: 
+colorID: 0
+position: 1398,41
+---
+<<decreases5>> //decreases morale
+
+<< setspeaker DialogScreen Jason >>  
+Jason: *Not even look at them*
+
+Crewmate: Hey! I'm talking to you, Captain! Fine, whatever, may the gods curse you then! 
+
+Jason: I don't have time to talk 
+
+[[ (TESTING) Say Goodbye|exit_debug]]
+===
+title: exit_debug
+tags: 
+colorID: 0
+position: 841,480
+---
+<< setspeaker DialogScreen Jason >>
+
+<<end_dialog>>
+Jason: I will talk to you guy later.
+
+<<end_dialog>>
+<<stopsound>>
+===
+title: exit2_debug
+tags: 
+colorID: 0
+position: 33,403
+---
+<<end_dialog>>
+Crewmate: Wow, You play really good, we really have a fun time with you 
+
+Jason: Well , GGWP !
+<<end_dialog>>
+<<stopsound>>
+===

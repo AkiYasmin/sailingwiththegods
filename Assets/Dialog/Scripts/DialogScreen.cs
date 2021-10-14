@@ -93,6 +93,24 @@ public class DialogScreen : ViewBehaviour
 		StartCoroutine(DoStartDialog());
 	}
 
+	public void StartCrewDialog( string startNode, string backgroundName) { // I have no idea about the data from crew member list,
+																			// so I will not get any information from that yet, I will just test the dialog function in general first
+		
+		if (!set) {
+			yarnUI = GetComponent<CustomDialogUI>();
+			storage = GetComponent<InMemoryVariableStorage>();
+			runner = GetComponent<DialogueRunner>();
+			canvas = GetComponentInParent<Canvas>();
+
+			
+			set = true;
+		}
+		
+		Clear();
+		runner.startNode = startNode;
+		backgrounds.UseSprite(backgroundName);
+		StartCoroutine(DoStartDialog());
+	}
 	public void StartDialog(string startNode, string backgroundName) 
 	{
 		Clear();

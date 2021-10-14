@@ -247,6 +247,7 @@ public class CrewMember
 	public bool isKillable;
 	public bool isPartOfMainQuest;
 	public CrewType typeOfCrew;
+	public string status; // new function added for interaction status 
 	public bool isPirate;
 	public PirateType pirateType;
 
@@ -266,12 +267,13 @@ public class CrewMember
 	//	--navigators provide maps to different settlements and decrease negative random events
 	//	--warriors make sure encounters with pirates or other raiding activities go better in your favor
 	//	--slaves have zero clout--few benefits--but they never leave the ship unless they die
-	public CrewMember(int ID, string name, int originCity, int clout, CrewType typeOfCrew, string backgroundInfo, bool isKillable, bool isPartOfMainQuest, bool isPirate, PirateType pirateType) {
+	public CrewMember(int ID, string name, int originCity, int clout, CrewType typeOfCrew, string status, string backgroundInfo, bool isKillable, bool isPartOfMainQuest, bool isPirate, PirateType pirateType) {
 		this.ID = ID;
 		this.name = name;
 		this.originCity = originCity;
 		this.clout = clout;
 		this.typeOfCrew = typeOfCrew;
+		this.status = status;
 		this.backgroundInfo = backgroundInfo;
 		this.isKillable = isKillable;
 		this.isPartOfMainQuest = isPartOfMainQuest;

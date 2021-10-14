@@ -1,0 +1,83 @@
+title: Start_Debug
+tags: 
+colorID: 0
+position: 617,-133
+---
+<< reset DialogScreen >>
+<< setpartner DialogScreen CrewTalk >>
+<< setpartnername DialogScreen AllCrewMember >> 
+<<playsound>>
+
+<< set $answer_nice to false >>
+<< set $answer_mean to false >>
+<< set $answer_ignore to false >> 
+
+<< setspeaker DialogScreen other >>
+Crewmate: Hello, Captain! How are you doing today? //Dialouge Started 
+
+[[ Jason: Very good! Thank you for asking! |nice.debug]] //Choice 1
+
+[[ Jason: I think we are going to have a bad day. I think the stars have cursed us! |mean1.debug]] //Choice 2
+
+[[ Jason: *Ignores them* |mean2.debug]] //Choice 3
+
+[[  LEAVING Option|exit_debug]]
+===
+title: nice.debug
+tags: 
+colorID: 0
+position: 97,253
+---
+<<increases5>>
+<< setspeaker DialogScreen Jason >> 
+ Jason: Very good! Thank you for asking! 
+<< setspeaker DialogScreen other >>
+Crewmate: Yes, it looks like the stars are pointing us to the right location! 
+
+[[ (TESTING) Say Goodbye|exit_debug]]
+===
+title: mean1.debug
+tags: 
+colorID: 0
+position: 793,279
+---
+<<decreases>> //decreases morale
+<< setspeaker DialogScreen Jason >> 
+Jason: Urania may have cursed our journey. I'm afraid things might go bad today 
+according to the stars from yesterday's night.  //It will not affect the gameplay in any way.
+
+<< setspeaker DialogScreen other >>
+Crewmate: I don't think I feel good right now, Captain. I talk to you later.
+
+
+
+[[ (TESTING) Say Goodbye|exit_debug]]
+===
+title: mean2.debug
+tags: 
+colorID: 0
+position: 1196,231
+---
+<<decreases5>> //decreases morale
+
+<< setspeaker DialogScreen Jason >>  
+Jason: *Not even look at them*
+
+Crewmate: Hey! I'm talking to you, Captain! Fine, whatever, may the gods curse you then! 
+
+Jason: I don't have time to talk 
+
+[[ (TESTING) Say Goodbye|exit_debug]]
+===
+title: exit_debug
+tags: 
+colorID: 0
+position: 575,793
+---
+<< setspeaker DialogScreen Jason >>
+
+<<end_dialog>>
+Jason: I will talk to you guy later. 
+
+<<end_dialog>>
+===

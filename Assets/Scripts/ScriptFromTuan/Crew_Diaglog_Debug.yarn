@@ -1,0 +1,70 @@
+title: Start_Debug
+tags: 
+colorID: 0
+position: -196,-650
+---
+<< reset DialogScreen >>
+<< setpartner DialogScreen CrewTalk >>
+<< setpartnername DialogScreen AllCrewMember >>
+<< setconvotitle DialogScreen Docking_at_Port >>
+
+
+
+<< set $answer_nice to false >>
+<< set $answer_mean to false >>
+<< set $answer_ignore to false >>
+
+<< set $asked_types to false >>
+
+
+
+
+<< citynetworks DialogScreen >>
+<< networkconnections DialogScreen >> 
+<< checkcitytaxes DialogScreen >> 
+
+<< setspeaker DialogScreen other >>
+Hello our Captain, how are you today? Do you have anything for us?
+<< randomtext DialogScreen greeting any >> 
+
+<< setend DialogScreen >>
+/{$random_text}
+
+
+[[ Hello team, thank you for asking! |nice_debug]]
+[[ Why I have to answer you'all ? |mean_debug]]
+[[ Ignore them |ignore_intro_debug]]
+
+[[ (TESTING) LEAVE WITHOUT PAYING SHORTCUT |exit_debug]]
+===
+title: nice_debug
+tags: 
+colorID: 0
+position: -975,150
+---
+Empty Text
+===
+title: mean_debug
+tags: 
+colorID: 0
+position: -274,220
+---
+Empty Text
+===
+title: ignore_intro_debug
+tags: 
+colorID: 0
+position: 263,220
+---
+Empty Text
+===
+title: exit_debug
+tags: 
+colorID: 0
+position: 1874,-311
+---
+<< setspeaker DialogScreen Jason >>
+<< setsprite Telones unhappy >>
+<< set $entering_city to false >>
+Your fees are steep and your town disappoints: we'll take our profit and our chances to the next port.
+===

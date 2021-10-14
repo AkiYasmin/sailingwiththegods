@@ -1,0 +1,88 @@
+title: Start_Debug
+tags: 
+colorID: 0
+position: -196,-650
+---
+<< reset DialogScreen >>
+<< setpartner DialogScreen CrewTalk >>
+<< setpartnername DialogScreen AllCrewMember >>
+<< setconvotitle DialogScreen Docking_at_Port >>
+
+
+
+<< set $answer_nice to false >>
+<< set $answer_mean to false >>
+<< set $answer_ignore to false >>
+
+<< set $asked_types to false >>
+
+
+
+
+<< citynetworks DialogScreen >>
+<< networkconnections DialogScreen >> 
+<< checkcitytaxes DialogScreen >> 
+
+<< setspeaker DialogScreen other >>
+Hello our Captain, how are you today? Do you have anything for us?
+//<< randomtext DialogScreen greeting any >> 
+
+//<< setend DialogScreen >>
+///{$random_text}
+
+
+[[ Hello team, thank you for asking! |nice_debug]]
+[[ Why I have to answer you'all ? |mean_debug]]
+[[ Ignore them |ignore_intro_debug]]
+
+[[ (TESTING) LEAVE|exit_debug]]
+===
+title: nice_debug
+tags: 
+colorID: 0
+position: -1071,-282
+---
+<< set $answer_nice to true >> 
+
+<< setspeaker DialogScreen Jason >> 
+<<increase>>
+I'm good, thanks for asking guy
+
+[[ (TESTING) Say Goodbye |exit_debug]]
+===
+title: mean_debug
+tags: 
+colorID: 0
+position: -504,-289
+---
+<< setspeaker DialogScreen Jason >>
+You guy are nothing to make me answer those question. 
+
+<< setspeaker DialogScreen other >>
+Why you are so mean!? 
+<<decrease>>
+[[ (TESTING) Say Goodbye |exit_debug]]
+===
+title: ignore_intro_debug
+tags: 
+colorID: 0
+position: 343,-238
+---
+<< setspeaker DialogScreen Jason >>
+*turn you head away
+
+<< setspeaker DialogScreen other >>
+Hey, hey! 
+<<decrease>>
+[[ (TESTING) Say Goodbye |exit_debug]]
+===
+title: exit_debug
+tags: 
+colorID: 0
+position: -395,788
+---
+<< setspeaker DialogScreen Jason >>
+
+<<end_dialog>>
+I will talk to you guy later.
+===

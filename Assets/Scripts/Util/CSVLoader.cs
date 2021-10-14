@@ -314,6 +314,7 @@ public static class CSVLoader
 				originCity: int.Parse(records[2]), 
 				clout: int.Parse(records[3]), 
 				typeOfCrew: (CrewType)int.Parse(records[4]), 
+				status:records[6],
 				backgroundInfo: records[5], 
 				isKillable: isKillable, 
 				isPartOfMainQuest: isPartOfMainQuest, 
@@ -519,6 +520,26 @@ public static class CSVLoader
 
 		return textList;
 	}
+
+	//public static List<DialogText> LoadCrewDialog() {
+	//	List<DialogText> textList = new List<DialogText>();
+
+	//	char[] lineDelimiter = new char[] { '@' };
+	//	char newline = '%';
+	//	string filename = "Crew_Diaglog_Demo";
+
+	//	string[] fileByLine = TryLoadListFromGameFolder(filename);
+
+	//	for (int i = 1; i < fileByLine.Length; i++) {
+	//		string[] texts = fileByLine[i].Split(lineDelimiter);
+	//		string content = StripAndAddNewlines(texts[0], newline);
+	//		DialogText t = new DialogText(texts[1], texts[2], content);
+	//		textList.Add(t);
+	//	}
+
+	//	return textList;
+	//}
+
 
 	public static void LoadTavernaGameBarks(out List<string> insults, out List<string> bragging) {
 

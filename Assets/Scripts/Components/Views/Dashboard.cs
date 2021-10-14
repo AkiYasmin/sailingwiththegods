@@ -67,7 +67,8 @@ public class Dashboard : ViewBehaviour<DashboardViewModel>
 	}
 
 	private void CrewButtonClick() {
-		Globals.UI.Show(CrewList, Model.CrewList);
+		Globals.UI.Show(CrewList, Model.CrewList); 
 		CrewListScroll.value = 0;
+		Debug.Log("Crew Button clicked");
 	}
 }

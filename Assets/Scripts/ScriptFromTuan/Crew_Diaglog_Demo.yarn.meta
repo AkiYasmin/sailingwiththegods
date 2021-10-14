@@ -1,0 +1,31 @@
+fileFormatVersion: 2
+guid: bd4ac3a6edea5ed4fb667ff58f7c9f4a
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Crew_Diaglog_Debug (1)-Start_Debug-0
+  - Crew_Diaglog_Debug (1)-Start_Debug-1
+  - Crew_Diaglog_Debug (1)-Start_Debug-2
+  - Crew_Diaglog_Debug (1)-Start_Debug-3
+  - Crew_Diaglog_Debug (1)-Start_Debug-4
+  - Crew_Diaglog_Debug (1)-nice_debug-5
+  - Crew_Diaglog_Debug (1)-nice_debug-6
+  - Crew_Diaglog_Debug (1)-mean_debug-7
+  - Crew_Diaglog_Debug (1)-mean_debug-8
+  - Crew_Diaglog_Debug (1)-mean_debug-9
+  - Crew_Diaglog_Debug (1)-ignore_intro_debug-10
+  - Crew_Diaglog_Debug (1)-ignore_intro_debug-11
+  - Crew_Diaglog_Debug (1)-ignore_intro_debug-12
+  - Crew_Diaglog_Debug (1)-exit_debug-13
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

@@ -278,6 +278,7 @@ public class GameVars : MonoBehaviour
 		CSVLoader.LoadPirateText(out pirateTitles, out pirateSubtitles, out pirateStartText, out pirateTypeIntroText, out pirateNegotiateText,
 			out pirateRunSuccessText, out pirateRunFailText, out pirateSuccessText, out pirateFailureText);
 		portDialogText = CSVLoader.LoadPortDialog();
+		//portDialogText = CSVLoader.LoadCrewDialog();
 
 		CSVLoader.LoadTavernaGameBarks(out tavernaGameInsults, out tavernaGameBragging);
 

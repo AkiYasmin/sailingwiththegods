@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: 44162dc63a6c06746b3999b5ac1741f1
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Crew_Dialogue_2_Rework-Start-0
+  - Crew_Dialogue_2_Rework-Start-1
+  - Crew_Dialogue_2_Rework-Start-2
+  - Crew_Dialogue_2_Rework-Start-3
+  - Crew_Dialogue_2_Rework-nice_debug-4
+  - Crew_Dialogue_2_Rework-mean1_debug-5
+  - Crew_Dialogue_2_Rework-mean1_debug-6
+  - Crew_Dialogue_2_Rework-mean1_debug-7
+  - Crew_Dialogue_2_Rework-mean2_debug-8
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []
