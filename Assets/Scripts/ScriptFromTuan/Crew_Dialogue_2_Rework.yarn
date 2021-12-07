@@ -1,0 +1,130 @@
+title: Start_Debug2
+tags: 
+colorID: 0
+position: 716,-342
+---
+<< reset DialogScreen >>
+<< setpartner DialogScreenWithCrew CrewTalk >>
+<< setpartnername DialogScreenWithCrew CrewTalk >> 
+
+<<playsound>>
+<< set $answer_nice to false >>
+<< set $answer_mean to false >>
+<< set $answer_ignore to false >> 
+
+<< setspeaker DialogScreenWithCrew other >>
+
+Crewmate: Do you want to play Knucklebone, Captain? //Question initiated  
+
+[[ Jason: Sure, I would like to play it with you!|nice_debug2]] //Choice 1
+
+[[ Jason: I don't have time to play such childish games! |mean1_debug2]] //Choice 2
+
+[[ Jason: *Ignores them.* |mean2_debug2]] // Choice 3 
+
+[[  LEAVING Option|exit_debug2]]
+===
+title: nice_debug2
+tags: 
+colorID: 0
+position: 355,42
+---
+<<increase>> // increase morale
+
+<< setspeaker DialogScreenWithCrew Jason >> 
+
+ Jason: Sure, I would like to play it with you!
+
+<< setspeaker DialogScreenWithCrew CrewTalk>> 
+
+Crewmate: Yay!
+
+
+[[ (TESTING) Play around for a few minutes ( PLAY FOR FUN)|exit2_debug2]]
+[[ (TESTING) Play around for a few minutes ( MAKE THEM LOSE)|exit3_debug2]]
+===
+title: mean1_debug2
+tags: 
+colorID: 0
+position: 978,52
+---
+<<decrease>> //Decreases morale
+
+
+<< setspeaker DialogScreenWithCrew Jason >> 
+ Jason: I don't have time to play such childish games! 
+<< setspeaker DialogScreenWithCrew CrewTalk>> 
+Crewmate: "It's not childish! I want to play with you to past the time."
+<< setspeaker DialogScreenWithCrew Jason >> 
+Jason: "Go play with someone else or do your chores like you're supposed to!" 
+<< setspeaker DialogScreenWithCrew CrewTalk>> 
+Crewmate: "FINE! Be that way!" 
+
+[[ (TESTING) Say Goodbye|exit_debug2]]
+===
+title: mean2_debug2
+tags: 
+colorID: 0
+position: 1396,41
+---
+<<decreases5>> //decreases morale
+
+<< setspeaker DialogScreenWithCrew Jason >> 
+Jason: *Not even look at them*
+<< setspeaker DialogScreenWithCrew CrewTalk>> 
+Crewmate: Hey! I'm talking to you, Captain! Fine, whatever, may the gods curse you then! 
+<< setspeaker DialogScreenWithCrew Jason >> 
+Jason: I don't have time to talk 
+
+[[ (TESTING) Say Goodbye|exit_debug2]]
+===
+title: exit_debug2
+tags: 
+colorID: 0
+position: 840,475
+---
+<<end_dialog>>
+<< setspeaker DialogScreenWithCrew Jason >> 
+
+Jason: I will talk to you guy later.
+
+<<end_dialog>>
+<<stopsound>>
+===
+title: exit2_debug2
+tags: 
+colorID: 0
+position: 28,397
+---
+<<end_dialog>>
+<<increase5>>
+
+<< setspeaker DialogScreenWithCrew CrewTalk>> 
+Crewmate: Wow, You play really good, we really have a fun time with you 
+<< setspeaker DialogScreenWithCrew Jason >> 
+
+Jason: Well , GGWP !
+
+<<end_dialog>>
+<<stopsound>>
+===
+title: exit3_debug2
+tags: 
+colorID: 0
+position: 458,403
+---
+<<end_dialog>>
+<<decrease5>>
+
+<< setspeaker DialogScreenWithCrew CrewTalk>> 
+Crewmate: Why you trying to play so agressive !? 
+
+<< setspeaker DialogScreenWithCrew Jason >> 
+Jason: Well , I'm not playing for fun!
+<< setspeaker DialogScreenWithCrew CrewTalk>> 
+
+Crewmate: Okay GG then !
+
+<<end_dialog>>
+<<stopsound>>
+===

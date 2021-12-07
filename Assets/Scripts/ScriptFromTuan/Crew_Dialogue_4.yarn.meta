@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: a37e62421ca5e914091c9c879af276d8
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs: []
+  compilationStatus: 0
+  isSuccesfullyCompiled: 0
+  compilationErrorMessage: "Error on line 10 at position 48:\nextraneous input '
+    debug' expecting ']]'\r\n[[Jason: No, I prefer drinking water. |choice2. debug]]\r\n                                              
+    ^^^^^^\n\nTokens:\n1:0 ID \"title\"\n1:5 HEADER_DELIMITER \": \"\n1:7 REST_OF_LINE
+    \"Start\"\n2:0 HEADER_NEWLINE \"\n\"\n2:0 ID \"tags\"\n2:4 HEADER_DELIMITER \":
+    \"\n3:0 HEADER_NEWLINE \"\n\"\n3:0 ID \"colorID\"\n3:7 HEADER_DELIMITER \": \"\n3:9
+    REST_OF_LINE \"0\"\n4:0 HEADER_NEWLINE \"\n\"\n4:0 ID \"position\"\n4:8 HEADER_DELIMITER
+    \": \"\n4:10 REST_OF_LINE \"602,-63\"\n5:0 HEADER_NEWLINE \"\n\"\n5:0 '---' \"---\"\n6:0
+    TEXT \"Crewmate: Do you love to drink wine, Captain?\"\n8:0 TEXT_NEWLINE \"\n\n\"\n8:0
+    '[[' \"[[\"\n8:2 OPTION_TEXT \"Jason: Yes, I always drink wine every day. I love
+    the taste of it. \"\n8:69 '|' \"|\"\n8:70 OPTION_ID \"choice1.debug\"\n8:83 ']]'
+    \"]]\"\n10:0 '[[' \"[[\"\n10:2 OPTION_TEXT \"Jason: No, I prefer drinking water.
+    \"\n10:38 '|' \"|\"\n10:39 OPTION_ID \"choice2.\"\n10:47 OPTION_TEXT \" debug\"\n10:53
+    ']]' \"]]\""
+  baseLanguage: {instanceID: 0}
+  localizations: []

@@ -1,0 +1,83 @@
+title: Start_Debug3
+tags: 
+colorID: 0
+position: 616,-134
+---
+<< reset DialogScreen >>
+<< setpartner DialogScreenWithCrew CrewTalk >>
+<< setpartnername DialogScreenWithCrew CrewTalk >> 
+<<playsound>>
+
+
+
+<< setspeaker DialogScreenWithCrew other >>
+Crewmate: Hello, Captain! How are you doing today? //Dialouge Started 
+
+[[ Jason: Very good! Thank you for asking! |nice_debug3]] //Choice 1
+
+[[ Jason: I think we are going to have a bad day. I think the stars have cursed us! |mean1_debug3]] //Choice 2
+
+[[ Jason: *Ignores them* |mean2_debug3]] //Choice 3
+
+[[  LEAVING Option|exit_debug3]]
+===
+title: nice_debug3
+tags: 
+colorID: 0
+position: 97,251
+---
+<<increase5>>
+<<setsprite CrewTalk happy>>
+<< setspeaker DialogScreenWithCrew Jason >> 
+ Jason: Very good! Thank you for asking! 
+<< setspeaker DialogScreenWithCrew CrewTalk>> 
+Crewmate: Yes, it looks like the stars are pointing us to the right location! 
+
+[[ (TESTING) Say Goodbye|exit_debug3]]
+===
+title: mean1_debug3
+tags: 
+colorID: 0
+position: 792,278
+---
+<<decreases>> //decreases morale
+<<setsprite CrewTalk unhappy>>
+<< setspeaker DialogScreenWithCrew Jason >> 
+Jason: Urania may have cursed our journey. I'm afraid things might go bad today 
+according to the stars from yesterday's night.  //It will not affect the gameplay in any way.
+
+<< setspeaker DialogScreenWithCrew CrewTalk>> 
+Crewmate: I don't think I feel good right now, Captain. I talk to you later.
+
+
+
+[[ (TESTING) Say Goodbye|exit_debug3]]
+===
+title: mean2_debug3
+tags: 
+colorID: 0
+position: 1196,230
+---
+<<decreases5>> //decreases morale
+<<setsprite CrewTalk unhappy>>
+<< setspeaker DialogScreen Jason >>  
+Jason: *Not even look at them*
+<< setspeaker DialogScreenWithCrew CrewTalk>> 
+Crewmate: Hey! I'm talking to you, Captain! Fine, whatever, may the gods curse you then! 
+<< setspeaker DialogScreenWithCrew Jason >> 
+Jason: I don't have time to talk 
+
+[[ (TESTING) Say Goodbye|exit_debug3]]
+===
+title: exit_debug3
+tags: 
+colorID: 0
+position: 575,793
+---
+<<end_dialog>>
+<<setsprite CrewTalk neutral>>
+<< setspeaker DialogScreenWithCrew Jason >> 
+Jason: I will talk to you guy later. 
+
+<<stopsound>>
+===
