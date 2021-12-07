@@ -64,7 +64,7 @@ public class QuestGiver : MonoBehaviour
         }
 		if(ShrineOptionModel.numOfButton == 1 && quest.isActive == true && numOfCloses==0)
         {
-			Debug.Log("I HATE EMORY");
+			
 			OpenCompMenu();
         }
 	
