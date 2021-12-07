@@ -1643,16 +1643,80 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quest:
     isActive: 0
-    Manager: {fileID: 0}
-    meterBar: {fileID: 0}
+    Manager: {fileID: 2060710583}
+    meterBar: {fileID: 113772347}
     title: 
     descritpion: 
     moraleReward: 0
     goldReward: 0
     goal:
-      goalType: 0
-      neededAmount: 0
+      neededAmount: 3
       currentAmount: 0
+      quest:
+        isActive: 0
+        Manager: {fileID: 2060710583}
+        meterBar: {fileID: 113772347}
+        title: 
+        descritpion: 
+        moraleReward: 0
+        goldReward: 0
+        goal:
+          neededAmount: 0
+          currentAmount: 0
+          quest:
+            isActive: 0
+            Manager: {fileID: 0}
+            meterBar: {fileID: 0}
+            title: 
+            descritpion: 
+            moraleReward: 0
+            goldReward: 0
+            goal:
+              neededAmount: 0
+              currentAmount: 0
+              quest:
+                isActive: 0
+                Manager: {fileID: 0}
+                meterBar: {fileID: 0}
+                title: 
+                descritpion: 
+                moraleReward: 0
+                goldReward: 0
+                goal:
+                  neededAmount: 0
+                  currentAmount: 0
+                  quest:
+                    isActive: 0
+                    Manager: {fileID: 0}
+                    meterBar: {fileID: 0}
+                    title: 
+                    descritpion: 
+                    moraleReward: 0
+                    goldReward: 0
+                    goal:
+                      neededAmount: 0
+                      currentAmount: 0
+                      quest:
+                        isActive: 0
+                        title: 
+                        descritpion: 
+                        moraleReward: 0
+                        goldReward: 0
+                      player: {fileID: 0}
+                      giver: {fileID: 0}
+                    questList: []
+                  player: {fileID: 0}
+                  giver: {fileID: 0}
+                questList: []
+              player: {fileID: 0}
+              giver: {fileID: 0}
+            questList: []
+          player: {fileID: 0}
+          giver: {fileID: 0}
+        questList: []
+      player: {fileID: 344229148}
+      giver: {fileID: 1930848248}
+    questList: []
   Manager: {fileID: 2060710583}
   morale: 10
   gold: 1000
@@ -2525,7 +2589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &514953400
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5211,6 +5275,136 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820012107}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &883790765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 883790766}
+  - component: {fileID: 883790769}
+  - component: {fileID: 883790768}
+  - component: {fileID: 883790767}
+  m_Layer: 5
+  m_Name: Close Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &883790766
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883790765}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 340.69836}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1606591286}
+  m_Father: {fileID: 1060410872}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 214, y: -193}
+  m_SizeDelta: {x: 297.1322, y: 104.026}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &883790767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883790765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 883790768}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1930848248}
+        m_MethodName: CloseMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &883790768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883790765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1b904c6aa10aa0f4bb2bfbe3fb4cc630, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &883790769
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883790765}
+  m_CullTransparentMesh: 0
 --- !u!114 &885828073 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 233969488940287759, guid: 585b20b052d2d944995ceb2669320f48,
@@ -5350,6 +5544,84 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20413ab64088af54bb1fedbda4e3f7d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &942109974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 942109975}
+  - component: {fileID: 942109977}
+  - component: {fileID: 942109976}
+  m_Layer: 5
+  m_Name: Quest Com text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &942109975
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942109974}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1385249871}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -3.7, y: -7.1}
+  m_SizeDelta: {x: 600.7294, y: 182.95525}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &942109976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942109974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Text Here
+--- !u!222 &942109977
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942109974}
+  m_CullTransparentMesh: 0
 --- !u!114 &945120987 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4952813922013435080, guid: f3889d45f08b2fc41b382de8034a2005,
@@ -5759,6 +6031,39 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 757963745665333933}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1060410871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1060410872}
+  m_Layer: 0
+  m_Name: Complete Menu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1060410872
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060410871}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -283.11963, y: 37.815674, z: -340.69836}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1583237408}
+  - {fileID: 1385249871}
+  - {fileID: 883790766}
+  m_Father: {fileID: 1979312478}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1076104019 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9103183980382062147, guid: 585b20b052d2d944995ceb2669320f48,
@@ -7303,6 +7608,82 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1380577419}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1385249870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1385249871}
+  - component: {fileID: 1385249873}
+  - component: {fileID: 1385249872}
+  m_Layer: 5
+  m_Name: Ques comp.t textbox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1385249871
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385249870}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 340.69836}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1575029983}
+  - {fileID: 942109975}
+  m_Father: {fileID: 1060410872}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 222.11963, y: 67.684326}
+  m_SizeDelta: {x: 692.74536, y: 393.64996}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1385249872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385249870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 64ff66a68ebc20c419026548780a8d2e, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1385249873
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385249870}
+  m_CullTransparentMesh: 0
 --- !u!1 &1393872170
 GameObject:
   m_ObjectHideFlags: 0
@@ -7871,6 +8252,18 @@ MonoBehaviour:
   m_Text: 'Morale amount here
 
 '
+--- !u!114 &1490235275 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7291197330739748088, guid: a5f752995f09a884da6d2e5d35202d46,
+    type: 3}
+  m_PrefabInstance: {fileID: 7291197332434941352}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8acd5d40e4dd9c24c85ec8ad0b4c24d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1521492877
 GameObject:
   m_ObjectHideFlags: 0
@@ -8132,6 +8525,158 @@ Transform:
   m_Father: {fileID: 755328197}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1575029982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1575029983}
+  - component: {fileID: 1575029985}
+  - component: {fileID: 1575029984}
+  m_Layer: 5
+  m_Name: Quest com. title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1575029983
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575029982}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1385249871}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.1, y: 124.9}
+  m_SizeDelta: {x: 607.89844, y: 56.753113}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1575029984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575029982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 3
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\t\tCongratulations"
+--- !u!222 &1575029985
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575029982}
+  m_CullTransparentMesh: 0
+--- !u!1 &1583237407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1583237408}
+  - component: {fileID: 1583237410}
+  - component: {fileID: 1583237409}
+  m_Layer: 5
+  m_Name: Quest Com. background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1583237408
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583237407}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 340.69836}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1060410872}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 222.11963, y: -10.815674}
+  m_SizeDelta: {x: 692.74536, y: 550.6614}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1583237409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583237407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c2eea0fae17c9884f9e6fcf3374f1120, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1583237410
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583237407}
+  m_CullTransparentMesh: 0
 --- !u!1 &1583746270 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3783563334582765571, guid: 585b20b052d2d944995ceb2669320f48,
@@ -8212,6 +8757,84 @@ Transform:
   m_Father: {fileID: 973437833}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1606591285
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1606591286}
+  - component: {fileID: 1606591288}
+  - component: {fileID: 1606591287}
+  m_Layer: 5
+  m_Name: Close text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1606591286
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606591285}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 883790766}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1606591287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606591285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 50
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Close
+--- !u!222 &1606591288
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606591285}
+  m_CullTransparentMesh: 0
 --- !u!114 &1639675443 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 524225582843219447, guid: 585b20b052d2d944995ceb2669320f48,
@@ -9324,24 +9947,162 @@ MonoBehaviour:
     isActive: 0
     Manager: {fileID: 2060710583}
     meterBar: {fileID: 113772347}
-    title: Starting Quest
-    descritpion: Accept to add morale
-    moraleReward: 50
-    goldReward: 100
+    title: 
+    descritpion: 
+    moraleReward: 0
+    goldReward: 0
     goal:
-      goalType: 0
       neededAmount: 0
       currentAmount: 0
+      quest:
+        isActive: 0
+        Manager: {fileID: 0}
+        meterBar: {fileID: 0}
+        title: 
+        descritpion: 
+        moraleReward: 0
+        goldReward: 0
+        goal:
+          neededAmount: 0
+          currentAmount: 0
+          quest:
+            isActive: 0
+            Manager: {fileID: 0}
+            meterBar: {fileID: 0}
+            title: 
+            descritpion: 
+            moraleReward: 0
+            goldReward: 0
+            goal:
+              neededAmount: 0
+              currentAmount: 0
+              quest:
+                isActive: 0
+                Manager: {fileID: 0}
+                meterBar: {fileID: 0}
+                title: 
+                descritpion: 
+                moraleReward: 0
+                goldReward: 0
+                goal:
+                  neededAmount: 0
+                  currentAmount: 0
+                  quest:
+                    isActive: 0
+                    Manager: {fileID: 0}
+                    meterBar: {fileID: 0}
+                    title: 
+                    descritpion: 
+                    moraleReward: 0
+                    goldReward: 0
+                    goal:
+                      neededAmount: 0
+                      currentAmount: 0
+                      quest:
+                        isActive: 0
+                        title: 
+                        descritpion: 
+                        moraleReward: 0
+                        goldReward: 0
+                      player: {fileID: 0}
+                      giver: {fileID: 0}
+                    questList: []
+                  player: {fileID: 0}
+                  giver: {fileID: 0}
+                questList: []
+              player: {fileID: 0}
+              giver: {fileID: 0}
+            questList: []
+          player: {fileID: 0}
+          giver: {fileID: 0}
+        questList: []
+      player: {fileID: 344229148}
+      giver: {fileID: 1930848248}
+    questList: []
+  questList: []
   player: {fileID: 344229148}
   goal:
-    goalType: 0
-    neededAmount: 0
+    neededAmount: 3
     currentAmount: 0
+    quest:
+      isActive: 0
+      Manager: {fileID: 2060710583}
+      meterBar: {fileID: 113772347}
+      title: 
+      descritpion: 
+      moraleReward: 0
+      goldReward: 0
+      goal:
+        neededAmount: 0
+        currentAmount: 0
+        quest:
+          isActive: 0
+          Manager: {fileID: 0}
+          meterBar: {fileID: 0}
+          title: 
+          descritpion: 
+          moraleReward: 0
+          goldReward: 0
+          goal:
+            neededAmount: 0
+            currentAmount: 0
+            quest:
+              isActive: 0
+              Manager: {fileID: 0}
+              meterBar: {fileID: 0}
+              title: 
+              descritpion: 
+              moraleReward: 0
+              goldReward: 0
+              goal:
+                neededAmount: 0
+                currentAmount: 0
+                quest:
+                  isActive: 0
+                  Manager: {fileID: 0}
+                  meterBar: {fileID: 0}
+                  title: 
+                  descritpion: 
+                  moraleReward: 0
+                  goldReward: 0
+                  goal:
+                    neededAmount: 0
+                    currentAmount: 0
+                    quest:
+                      isActive: 0
+                      Manager: {fileID: 0}
+                      meterBar: {fileID: 0}
+                      title: 
+                      descritpion: 
+                      moraleReward: 0
+                      goldReward: 0
+                      goal:
+                        neededAmount: 0
+                        currentAmount: 0
+                      questList: []
+                    player: {fileID: 0}
+                    giver: {fileID: 0}
+                  questList: []
+                player: {fileID: 0}
+                giver: {fileID: 0}
+              questList: []
+            player: {fileID: 0}
+            giver: {fileID: 0}
+          questList: []
+        player: {fileID: 344229148}
+        giver: {fileID: 1930848248}
+      questList: []
+    player: {fileID: 344229148}
+    giver: {fileID: 1930848248}
+  controls: {fileID: 1490235275}
   questMenu: {fileID: 1961865734}
   titleText: {fileID: 523787105}
   decriptionText: {fileID: 518387419}
   moraleText: {fileID: 1467912366}
   goldText: {fileID: 1456714326}
+  CompMenu: {fileID: 1060410871}
+  CompDecriptionText: {fileID: 942109976}
+  numOfCloses: 0
 --- !u!4 &1930848249
 Transform:
   m_ObjectHideFlags: 0
@@ -9829,7 +10590,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2064172279
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10417,6 +11178,11 @@ PrefabInstance:
       propertyPath: menu
       value: 
       objectReference: {fileID: 232411129}
+    - target: {fileID: 1446390382397619009, guid: 7675c14122f18e2438dac94c4c2bcf02,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1446390382397619010, guid: 7675c14122f18e2438dac94c4c2bcf02,
         type: 3}
       propertyPath: m_Name
@@ -10807,7 +11573,7 @@ PrefabInstance:
     - target: {fileID: 1973985563406290245, guid: 038dcc9265f67c849ae8b4789e35f80f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 038dcc9265f67c849ae8b4789e35f80f, type: 3}
@@ -13631,7 +14397,7 @@ PrefabInstance:
     - target: {fileID: 3037693226908094435, guid: 585b20b052d2d944995ceb2669320f48,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3037693227980404953, guid: 585b20b052d2d944995ceb2669320f48,
         type: 3}
@@ -15377,6 +16143,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518749972819309070, guid: 585b20b052d2d944995ceb2669320f48,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6525779856667092933, guid: 585b20b052d2d944995ceb2669320f48,
         type: 3}

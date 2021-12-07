@@ -10,10 +10,17 @@ public class QuestGoal
 	//if there's a amount of statues/items needed
 	//change needed amount to statue amount and attach to statue 
 
-	public GoalType goalType;
 
-	public int neededAmount;
-	public int currentAmount;
+
+	public int neededAmount = 3;
+	public int currentAmount = 0;
+	public Quest quest;
+	public Player player;
+	public ShrineOptionModel Shrine;
+	public QuestGiver giver;
+
+
+
 
 	public bool isDone()
 	{
@@ -24,21 +31,28 @@ public class QuestGoal
 		return false;
 	}
 
+	public void Update()
+	{
+		//StatueAdded();
+	}
+
 	public void StatueAdded()
 	{
-		//check if a statue has been placed in said city
+		Debug.Log("The Is Buy is set to:" + Shrine.IsBuy);
 
-		if (goalType == GoalType.ItemPlacing)
+		//checking if the player has click the buttons to buy stuff
+		if (Shrine.IsBuy== true)
 		{
-			currentAmount++;
+			Debug.Log("The player has bought a statue and complete the quest");
+			giver.OpenCompMenu();
+			//add a complete screen for when the quest is done. 
+			if (quest.isActive)//checking id the quest is active 
+			{
+				Debug.Log("The quest is done");//doesnt work 
+			}
+
 		}
-
-
 	}
 }
 
-public enum GoalType
-{
-	ItemPlacing,
-	Escort
-}
+

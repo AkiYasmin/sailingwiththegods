@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
 	public CrewDialogManager Manager;
 	public int morale = 40;
 	public int gold = 1000;
+	public List<Quest> Quests { get; set; }
+
 
 	public void SetUp()
 	{
@@ -18,12 +20,14 @@ public class Player : MonoBehaviour
 
 		if (quest.isActive)
 		{
-			quest.goal.StatueAdded();
+			Debug.Log("This Quest is active");
+			//quest.goal.StatueAdded();
 			if (quest.goal.isDone())
 			{
 				//morale += quest.moraleReward;//adding morale that the player has
 				gold += quest.goldReward;
 				quest.Complete();
+			
 			}
 		}
 
