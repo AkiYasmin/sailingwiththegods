@@ -1,0 +1,158 @@
+title: Start_Debug4
+tags: 
+colorID: 0
+position: 602,-63
+---
+Crewmate: Do you love to drink wine, Captain?
+
+[[Jason: Yes, I always drink wine every day. I love the taste of it. |choice1_debug4]]
+
+[[Jason: No, I prefer drinking water. |choice2_debug4]]
+
+[[Jason: *Ignores them* |mean_debug4]]
+===
+title: choice1_debug4
+tags: 
+colorID: 0
+position: -31,254
+---
+Crewmate: My favorite wine is red wine. What your's favorite, captain?
+
+[[Jason: Red wine as well! |choice1A_debug4]]
+
+[[Jason: I like to drink white wine. |choice1B_debug]]
+
+[[Jason: I like oenomel oinomel. I love the honey taste mixed with the wine. |choice1C_debug]]
+===
+title: choice2_debug4
+tags: 
+colorID: 0
+position: 789,268
+---
+Crewmate: I never knew a single glass of wine would be too much for you to handle.
+
+[[Jason: I just like water. It's plain and simple, but the taste of wine does not complements me at all. |choice2A_debug]]
+
+[[Jason: I could fire you for talking to me like that. |choice2B_debug]]
+===
+title: mean_debug4
+tags: 
+colorID: 0
+position: 1419,281
+---
+Crewmate: Hey, I'm talking to you! 
+
+<<decreases>> //decreases morale
+===
+title: choice1A_debug4
+tags: 
+colorID: 8
+position: -529,629
+---
+Crewmate:  I'm glad we both enjoyed something in common!
+           I want a glass of wine now. Care to join me, Captain?
+           It would be an honor!
+
+[[*Joins them* |Choice1_Good_debug]]
+
+[[Jason: Sorry, I do not feel like drinking today. |Choice1_Bad_debug]]
+===
+title: choice1B_debug
+tags: 
+colorID: 0
+position: -29,626
+---
+Crewmate: I do not the like the taste of white wine. I respect your opinions.
+          Do you want to join and have a glass of wine with me, captain?
+
+[[Jason: *Joins them*. |Choice1BNice.debug]]
+
+[[Jason: Sorry, I do not feel like drinking today. |Choice1BBad.debug]]
+===
+title: choice1C_debug
+tags: 
+colorID: 0
+position: 368,628
+---
+Crewmate: Wow, I did not know that you're a fancy drinker, captain!
+          We should try some when we get to a tavern!
+          I should get back to work. Thank you for talking to me, captain!
+
+<<increases>> //increases morale.
+===
+title: choice2A_debug
+tags: 
+colorID: 0
+position: 696,616
+---
+Crewmate: You are a boring captain. I suppose I go find some other crewmate with similar tastes like mine.
+
+<<decreases>> //decreases morale.
+===
+title: choice2B_debug
+tags: 
+colorID: 0
+position: 972,616
+---
+Crewmate: I'm sorry, captain! It was a joke!
+          Do you forgive me?
+
+[[Jason: Yes, I forgive you. I'm a nice captain. |choice2_bNice_debug]]
+
+[[Jason: No, and you should not be joking. I can fire you right now, but you are lucky that I'm a forgiving captain. |choice2_BMean_debug]]
+===
+title: Choice1_Good_debug
+tags: 
+colorID: 8
+position: -900,968
+---
+Jason: I would love to drink with you, my friend!
+
+<<increases>> //increases morale by 10.
+===
+title: Choice1_Bad_debug
+tags: 
+colorID: 0
+position: -431,958
+---
+Crewmate: *sighs* I was hoping that you will say yes after our interest in drinking red wine. 
+           Another time is fine, I suppose.
+
+<<decreases>> //decrease morale by 5, if possible. If not, then 10 is fine.
+===
+title: Choice1BNice.debug
+tags: 
+colorID: 0
+position: -80,1002
+---
+Jason: I would love to drink with you!
+
+<<increases>> //increases morale by 5, if possible. If not, then 10 is fine.
+===
+title: Choice1BBad.debug
+tags: 
+colorID: 0
+position: 334,953
+---
+Crewmate: *sighs* It's fine, captain. Another time, I suppose.
+
+<<decreases>> //decrease morale by 5, if possible. If not, then 10 is fine.
+===
+title: choice2_bNice_debug
+tags: 
+colorID: 8
+position: 905,972
+---
+Crewmate: Thank you, captain! It won't happen again!
+
+<<increases>> //increase morale by 5, if possible. If not, then 10 is fine.
+===
+title: choice2_BMean_debug
+tags: 
+colorID: 0
+position: 1329,961
+---
+Crewmate: It won't happen again, captain!
+
+<<decreases morale>> //decrease morale by 5, if possible. If not, then 10 is fine.
+===

@@ -1,0 +1,86 @@
+title: Start_Debug5
+tags: 
+colorID: 0
+position: 434,53
+---
+<< reset DialogScreen >>
+<< setpartner DialogScreenWithCrew CrewTalk >>
+<< setpartnername DialogScreenWithCrew CrewTalk >> 
+
+<<playsound>>
+
+
+<< setspeaker DialogScreenWithCrew other >>
+Crewmate: We seems to be running low on food, and we do not want to eat our livestock.
+          Should we suggest to raid a nearby town or city to get some food?
+
+[[Jason: NO! We are not the bad people here. We do not want to ruin our reputation with the people, town, or city! |No_debug5]]
+
+[[Jason: Yes! Let's do it. We will need our livestock to sell for drachma! |yes_debug5]]
+===
+title: No_debug5
+tags: 
+colorID: 0
+position: 119,337
+---
+<<setsprite CrewTalk unhappy>>
+<< setspeaker DialogScreenWithCrew Jason >> 
+
+ Jason: Let's wait until we find a good town
+<< setspeaker DialogScreenWithCrew CrewTalk>> 
+
+Crewmate: I guess we will continue to eat our livestock that we could have sell for a lot of drachma.
+
+<<decreases>> //Decrease morale by 5.
+              //Increase clout by 5, because the gods are happy with not stealing food.
+<<stopsound>>
+===
+title: yes_debug5
+tags: 
+colorID: 0
+position: 731,334
+---
+<< setspeaker DialogScreenWithCrew Jason >> 
+
+ Jason: I guess we have no choice now,right?
+<< setspeaker DialogScreenWithCrew CrewTalk>> 
+<<setsprite CrewTalk happy>>
+Crewmate: I knew you had in you, Captain! Let us raid together. If someone stops us, we kill them too!
+
+[[ Jason: No killing is allowed! Knock them out instead. We just here to steal the food! |knockout_debug5]]
+[[ Jason: Yes, we will enforce the "No Mercy" rule on those who stop us |evil_debug]]
+===
+title: knockout_debug5
+tags: 
+colorID: 0
+position: 591,682
+---
+<< setspeaker DialogScreenWithCrew Jason >> 
+Jason: No killing is allowed! Knock them out instead. We just here to steal the food!
+<< setspeaker DialogScreenWithCrew CrewTalk>> 
+<<setsprite CrewTalk unhappy>>
+Crewmate: And risk us for knowing our faces? Less bloodshed the better, I guess.
+
+<<increase>> // increase morale by 5, because they have food to be happy.
+             // decrease clout by 5, because they are stealing food but at least they are not killing anyone today.
+
+<<increasesFood>> //randomly increase food from 5 to 15. They get less, because they take more time to figuring out how to knock someone out rather than stabbing their weapon into someone' chest.
+<<stopsound>>
+===
+title: evil_debug
+tags: 
+colorID: 0
+position: 1022,670
+---
+<< setspeaker DialogScreenWithCrew Jason >> 
+Jason: Yes, we will enforce the "No Mercy" rule on those who stop us 
+<< setspeaker DialogScreenWithCrew CrewTalk>> 
+<<setsprite CrewTalk happy>>
+Crewmate:  *battle cry*
+
+<<increases>> //Increase morale by 10, because of stealing food and killing everyone.
+              //Decrease clout by 15, both actions angered the gods and the reputation of the moral people greatly.
+
+<<increasesFood>> //Increase food between from 15 to 30, there's no resistance to stop the crew and captain when the people are dead.
+<<stopsound>>
+===

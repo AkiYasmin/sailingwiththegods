@@ -6,16 +6,20 @@ using Yarn.Unity;
 
 public class CrewDialogManager : MonoBehaviour
 {
-	public int maxMeter = 100;
-	public int currentMeter;
+	public float maxMeter = 100f;
+	public float currentMeter;
 	public MeterBar meterBar;
 
 	public DialogueRunner diaglogRunner;
 	public GameObject diaglogScreen;
 	public AudioSource testsound;
+
+	//public script_player_controls playerControls;
+
+	
 	void Start()
     {
-		currentMeter = 50;
+		currentMeter = 50f;
 		meterBar.SetMeter(currentMeter);
 		//diaglogRunner.AddCommandHandler("end_dialog", TurnOffScene);
 		diaglogRunner.AddCommandHandler("increase", Increase10Morale);
@@ -25,7 +29,7 @@ public class CrewDialogManager : MonoBehaviour
 		diaglogRunner.AddCommandHandler("playsound", TurnOnScreen);
 		diaglogRunner.AddCommandHandler("stopsound", TurnOffMusic);
 
-
+		//GetComponent<DialogueRunner>();
 
 	}
 
@@ -44,26 +48,26 @@ public class CrewDialogManager : MonoBehaviour
 
 	public void Increase10Morale(string[] parameter) 
 	{
-		currentMeter += 10;
+		currentMeter += 10f;
 		meterBar.SetMeter(currentMeter);
 		Debug.Log("Increase");
 	}
 
 	public void Increase5Morale(string[] parameter) {
-		currentMeter += 5;
+		currentMeter += 5f;
 		meterBar.SetMeter(currentMeter);
 		Debug.Log("Increase");
 	}
 
 	public void Decrease10Morale(string[] parameter) 
 	{
-		currentMeter -= 10;
+		currentMeter -= 10f;
 		meterBar.SetMeter(currentMeter);
 		Debug.Log("Decrease");
 	}
 
 	public void Decrease5Morale(string[] parameter) {
-		currentMeter -= 5;
+		currentMeter -= 5f;
 		meterBar.SetMeter(currentMeter);
 		Debug.Log("Decrease");
 	}
@@ -73,4 +77,6 @@ public class CrewDialogManager : MonoBehaviour
     {
 		
 	}
+
+	
 }

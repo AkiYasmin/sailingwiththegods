@@ -96,7 +96,8 @@ public class DialogScreen : ViewBehaviour
 	public void StartCrewDialog( string startNode, string backgroundName) { // I have no idea about the data from crew member list,
 																			// so I will not get any information from that yet, I will just test the dialog function in general first
 		
-		if (!set) {
+		if (!set) 
+		{
 			yarnUI = GetComponent<CustomDialogUI>();
 			storage = GetComponent<InMemoryVariableStorage>();
 			runner = GetComponent<DialogueRunner>();

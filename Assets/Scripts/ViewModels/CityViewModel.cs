@@ -149,6 +149,11 @@ public class CityViewModel : Model
 			//	GameVars.ShowANotificationMessage("Not Enough Drachma to pay the port tax and leave!");
 			//}
 		}
+		if (Globals.GameVars.playerShipVariables.crewDialogManager.currentMeter <= 40f) 
+		{
+			GameVars.playerShipVariables.CrewQuit();
+			Debug.Log("Someone just Quit ");
+		}
 
 	}
 }

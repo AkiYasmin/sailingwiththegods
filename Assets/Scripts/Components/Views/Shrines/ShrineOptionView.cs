@@ -9,6 +9,9 @@ public class ShrineOptionModel : Model
 	public int Cost;
 	public int CloutGain;
 	public string BenefitHint;
+	public bool IsBuy = false;
+
+
 
 	public ShrineOptionModel(string name, int cost, int cloutGain, string benefitHint) {
 		Name = name;
@@ -24,6 +27,9 @@ public class ShrineOptionModel : Model
 			GameVars.ShowANotificationMessage("You built a " + Name + " for " + GameVars.currentSettlement.name + "! " + BenefitHint);
 			GameVars.AdjustPlayerClout(1);
 			GameVars.playerShipVariables.ship.builtMonuments += GameVars.currentSettlement.name + " -- " + Name + "\n";
+			IsBuy = true;//checks when something is bought
+			
+
 
 		}
 		else {
@@ -31,13 +37,22 @@ public class ShrineOptionModel : Model
 		}
 
 	}
+
+	
+
+
 }
+
+
 
 public class ShrineOptionView : ViewBehaviour<ShrineOptionModel>
 {
 	[SerializeField] StringView Name = null;
 	[SerializeField] StringView BenefitHint = null;
 	[SerializeField] ButtonView Buy = null;
+	
+
+	
 
 	public override void Bind(ShrineOptionModel model) {
 		base.Bind(model);
@@ -47,6 +62,9 @@ public class ShrineOptionView : ViewBehaviour<ShrineOptionModel>
 		Buy.Bind(ValueModel.New(new ButtonViewModel {
 			Label = model.Cost + " dr",
 			OnClick = model.Buy
+
 		}));
+
 	}
+
 }

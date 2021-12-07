@@ -5,11 +5,15 @@ using System.Text;
 using System.Linq;
 using NaughtyAttributes;
 using UnityEngine.UI;
+using Yarn.Unity;
 
 public class script_player_controls : MonoBehaviour
 {
 
 	CharacterController controller;
+	public MeterBar meterBar;
+	public CrewDialogManager crewDialogManager;
+	public DialogueRunner diaglogRunner;
 
 	Transform shipTransform;
 
@@ -157,6 +161,8 @@ public class script_player_controls : MonoBehaviour
 		StartCoroutine(WindZoneMaintenance());
 
 		CheckCurrentWaterWindZones();
+
+		diaglogRunner.AddCommandHandler("checking", CheckMeterBarStatus);
 	}
 
 	// Update is called once per frame
@@ -632,17 +638,29 @@ public class script_player_controls : MonoBehaviour
 		//--I'm simply cutting this in half for now--TODO: It would be nice to take the time of day into account--
 		//--e.g. the hotter hours should require more expenditure and therefore more resources. 
 		//--Additionally--I would liek to turn off rowing as well as sails--so if one is just sailing without oaring--less resources are used.
-		if (isPassingTime) { dailyProvisionsKG /= 2; dailyWaterKG /= 2; }
+		if (isPassingTime)
+		{ 
+			dailyProvisionsKG /= 2; dailyWaterKG /= 2; 
+		}
 		//deplete Provisions based on number of crew  (NASA - .83kg per astronaut / day
-		if (ship.cargo[1].amount_kg <= 0) ship.cargo[1].amount_kg = 0;
-		else ship.cargo[1].amount_kg -= (travelTime * dailyProvisionsKG) * ship.crew;
+		if (ship.cargo[1].amount_kg <= 0) 
+			ship.cargo[1].amount_kg = 0;
+		else
+			ship.cargo[1].amount_kg -= (travelTime * dailyProvisionsKG) * ship.crew;
+			crewDialogManager.currentMeter = ship.cargo[0].amount_kg -= travelTime * dailyProvisionsKG * ship.crew;
+			meterBar.SetMeter(crewDialogManager.currentMeter);
+
 
 		//deplete water based on number of crew (NASA 3kg minimum a day --we'll use 5 because conditions are harder--possibly 10 from rowing)
-		if (ship.cargo[0].amount_kg <= 0) ship.cargo[0].amount_kg = 0;
-		else ship.cargo[0].amount_kg -= (travelTime * dailyWaterKG) * ship.crew;
+		if (ship.cargo[0].amount_kg <= 0) 
+			ship.cargo[0].amount_kg = 0;
+		else
+			ship.cargo[0].amount_kg -= (travelTime * dailyWaterKG) * ship.crew;
+			
 
 		//deplete ship hp (we'll say 1HP per day)
-		if (ship.health <= 0) ship.health = 0;
+		if (ship.health <= 0) 
+			ship.health = 0;
 		else ship.health -= travelTime;
 
 		//Debug.Log (travelTime + "days in segment   --- " +ship.cargo[0].amount_kg + "kg    " + ship.cargo[1].amount_kg + "kg    " + ship.health + "hp   lost to travel needs");
@@ -819,6 +837,17 @@ public class script_player_controls : MonoBehaviour
 		}
 	}
 
+	public void CrewQuit() 
+	{
+		if (ship.crewRoster.Count > 0) {
+			//choose random crew to kick of
+			ship.crewRoster.RemoveAt(Random.Range(0, ship.crewRoster.Count));
+			
+		}
+		
+
+	}
+
 	void UpdateShipSpeed() {
 
 		// TODO: Re-evaluate ship speed code based on Sandy's articles and get this working again
@@ -918,7 +947,7 @@ public class script_player_controls : MonoBehaviour
 					notificationMessage += crewDeathCount + " crewmember quit because you left without a full store of provisions";
 				}
 			}
-			
+
 			//Check water
 			if (lowWater) {
 				if (lowFood) {
@@ -946,7 +975,21 @@ public class script_player_controls : MonoBehaviour
 		else {
 			return false;
 		}
+		
+		
 	}
+
+	public void CheckMeterBarStatus(string[] parameter) 
+	{
+		//diaglogScreen.SetActive(false);
+		if(crewDialogManager.currentMeter <= 40) 
+		{
+			CrewQuit();
+			Debug.Log("Someone just quit");
+		}
+		
+	}
+
 	//Getting the win total for board games - roughly half of what they need to not starve. 
 	public float GameResultFood() {
 		

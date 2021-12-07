@@ -1,29 +1,15 @@
-title: Start_Debug
+title: Start_Debug1
 tags: 
 colorID: 0
 position: -196,-650
 ---
 << reset DialogScreen >>
-<< setpartner DialogScreen CrewTalk >>
-<< setpartnername DialogScreen AllCrewMember >>
-<< setconvotitle DialogScreen Docking_at_Port >>
+<< setpartner DialogScreenWithCrew CrewTalk >>
+<< setpartnername DialogScreenWithCrew CrewTalk >> 
 
+<<playsound>>
 
-
-<< set $answer_nice to false >>
-<< set $answer_mean to false >>
-<< set $answer_ignore to false >>
-
-<< set $asked_types to false >>
-
-
-
-
-<< citynetworks DialogScreen >>
-<< networkconnections DialogScreen >> 
-<< checkcitytaxes DialogScreen >> 
-
-<< setspeaker DialogScreen other >>
+<< setspeaker DialogScreenWithCrew other >>
 Hello our Captain, how are you today? Do you have anything for us?
 //<< randomtext DialogScreen greeting any >> 
 
@@ -31,58 +17,59 @@ Hello our Captain, how are you today? Do you have anything for us?
 ///{$random_text}
 
 
-[[ Hello team, thank you for asking! |nice_debug]]
-[[ Why I have to answer you'all ? |mean_debug]]
-[[ Ignore them |ignore_intro_debug]]
+[[ Hello team, thank you for asking! |nice_debug1]]
+[[ Why I have to answer you'all ? |mean_debug1]]
+[[ Ignore them |ignore_intro_debug1]]
 
-[[ (TESTING) LEAVE|exit_debug]]
+[[ (TESTING) LEAVE|exit_debug1]]
 ===
-title: nice_debug
+title: nice_debug1
 tags: 
 colorID: 0
-position: -1071,-282
+position: -1073,-284
 ---
-<< set $answer_nice to true >> 
+<< setspeaker DialogScreenWithCrew Jason >> 
 
-<< setspeaker DialogScreen Jason >> 
 <<increase>>
 I'm good, thanks for asking guy
 
-[[ (TESTING) Say Goodbye |exit_debug]]
+[[ (TESTING) Say Goodbye |exit_debug1]]
 ===
-title: mean_debug
+title: mean_debug1
 tags: 
 colorID: 0
-position: -504,-289
+position: -503,-291
 ---
-<< setspeaker DialogScreen Jason >>
+<< setspeaker DialogScreenWithCrew Jason >> 
 You guy are nothing to make me answer those question. 
 
-<< setspeaker DialogScreen other >>
+<< setspeaker DialogScreenWithCrew CrewTalk>> 
 Why you are so mean!? 
 <<decrease>>
-[[ (TESTING) Say Goodbye |exit_debug]]
+[[ (TESTING) Say Goodbye |exit_debug1]]
 ===
-title: ignore_intro_debug
+title: ignore_intro_debug1
 tags: 
 colorID: 0
 position: 343,-238
 ---
-<< setspeaker DialogScreen Jason >>
+<< setspeaker DialogScreenWithCrew Jason >> 
 *turn you head away
 
-<< setspeaker DialogScreen other >>
+<< setspeaker DialogScreenWithCrew CrewTalk>> 
 Hey, hey! 
 <<decrease>>
-[[ (TESTING) Say Goodbye |exit_debug]]
+[[ (TESTING) Say Goodbye |exit_debug1]]
 ===
-title: exit_debug
+title: exit_debug1
 tags: 
 colorID: 0
-position: -395,788
+position: -397,785
 ---
-<< setspeaker DialogScreen Jason >>
+<< setspeaker DialogScreenWithCrew Jason >>
+
 
 <<end_dialog>>
 I will talk to you guy later.
+<<stopsound>>
 ===
